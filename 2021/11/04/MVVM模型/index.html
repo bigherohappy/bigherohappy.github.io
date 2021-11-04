@@ -22,7 +22,7 @@
 
   
 
-  <title>vue数据绑定 | bigherohappy</title>
+  <title>理解MVVM模型 | bigherohappy</title>
 
   
 
@@ -93,11 +93,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">vue数据绑定</h1>
+          <h1 class="title-wrap">理解MVVM模型</h1>
           <h2 class="title-sub-wrap">
             <strong>大白</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-04T10:27:25.000Z" itemprop="datePublished">2021-11-04</time>
+            <time  class="article-date" datetime="2021-11-04T13:55:09.118Z" itemprop="datePublished">2021-11-04</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -126,16 +126,9 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="vue数据绑定"><a href="#vue数据绑定" class="headerlink" title="vue数据绑定"></a>vue数据绑定</h1><h2 id="单向绑定（v-bind）"><a href="#单向绑定（v-bind）" class="headerlink" title="单向绑定（v-bind）"></a>单向绑定（v-bind）</h2><p>单向绑定（v-bind）：数据只能从data流向页面</p>
-<h2 id="双向绑定（v-model）"><a href="#双向绑定（v-model）" class="headerlink" title="双向绑定（v-model）"></a>双向绑定（v-model）</h2><p>双向绑定（v-model)：数据不仅能从data流向页面，还可以从页面流向data</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>1.双向绑定一般都是应用在表单元素上（如：input、select等）<br>2.v-model：value可以简写为v-model，因为v-model默认收集的就是value值</p>
-<p>下面展示一些 v-bind v-model的代码片。</p>
-<pre><code>// 单向数据绑定
-单向数据绑定：&lt;input type=&quot;text&quot; :value=&quot;a&quot;&gt;
-</code></pre>
-<pre><code class="javascript">// 双向数据绑定
- 双向数据绑定：&lt;input type=&quot;text&quot; v-model:=&quot;a&quot;&gt;
-</code></pre>
+        <h1 id="MVVM模型"><a href="#MVVM模型" class="headerlink" title="MVVM模型"></a>MVVM模型</h1><h6 id="M-模型-Model-对应data的数据，代表数据模型，数据和业务逻辑都在Model层中定义"><a href="#M-模型-Model-对应data的数据，代表数据模型，数据和业务逻辑都在Model层中定义" class="headerlink" title="M:模型(Model):对应data的数据，代表数据模型，数据和业务逻辑都在Model层中定义"></a>M:模型(Model):对应data的数据，代表数据模型，数据和业务逻辑都在Model层中定义</h6><h6 id="V：视图-View-模板，负责数据的展示"><a href="#V：视图-View-模板，负责数据的展示" class="headerlink" title="V：视图(View):模板，负责数据的展示"></a>V：视图(View):模板，负责数据的展示</h6><h6 id="VM：视图模型-ViewModel-Vue实例对象，负责监听Model中数据的改变并且控制视图的更新，处理用户交互操作"><a href="#VM：视图模型-ViewModel-Vue实例对象，负责监听Model中数据的改变并且控制视图的更新，处理用户交互操作" class="headerlink" title="VM：视图模型(ViewModel):Vue实例对象，负责监听Model中数据的改变并且控制视图的更新，处理用户交互操作"></a>VM：视图模型(ViewModel):Vue实例对象，负责监听Model中数据的改变并且控制视图的更新，处理用户交互操作</h6><p><img src="https://img-blog.csdnimg.cn/6b5239e7d1954bb2b92b65ecf93426d8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>观察发现：<br>        1.data中所有的属性，最后都出现在了vm身上<br>        2.vm身上所有的属性及Vue原型上所有属性，在Vue模板中都可以直接使用</p>
+<p> Model和View并无直接关联，而是通过ViewModel来进行联系的，Model和ViewModel之间有着双向数据绑定的联系。因此当Model中的数据改变时会触发 View层的刷新，View中由于用户交互操作而改变的数据也会在Model中同步。</p>
+<p> 这种模式实现了 Model和View的数据自动同步，因此开发者只需要专注于数据的维护操作即可，而不需要自己操作DOM。</p>
 
       </section>
 
@@ -143,28 +136,14 @@
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2021/11/04/%E4%BA%94/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">watch与comput的区别</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2021/11/04/%E5%9B%9B/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">GitHub搭建的个人博客发表文章</h2>
+        <a href="/2021/11/04/about/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">v-if和v-show的区别</h2>
         </a>
       
       <div class="card-text--row">Older</div>
