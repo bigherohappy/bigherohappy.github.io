@@ -22,7 +22,7 @@
 
   
 
-  <title>Hello World | bigherohappy</title>
+  <title>watch与comput的区别 | bigherohappy</title>
 
   
 
@@ -93,11 +93,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">watch与comput的区别</h1>
           <h2 class="title-sub-wrap">
             <strong>大白</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-09-14T16:07:24.463Z" itemprop="datePublished">2021-09-15</time>
+            <time  class="article-date" datetime="2021-11-04T10:27:25.000Z" itemprop="datePublished">2021-11-04</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -126,19 +126,9 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="Computed-和-Watch-的区别"><a href="#Computed-和-Watch-的区别" class="headerlink" title="Computed 和 Watch 的区别"></a>Computed 和 Watch 的区别</h1><h2 id="Computed"><a href="#Computed" class="headerlink" title="Computed"></a>Computed</h2><p> 它支持缓存，只有依赖的数据发生了变化，才会重新计算，不支持异步，当Computed中有异步操作时，无法监听数据的变化.computed的值会默认走缓存，计算属性是基于它们的响应式依赖进行缓存的，也就是基于data声明过，或者父组件传递过来的props中的数据进行计算的。如果一个属性是由其他属性计算而来的，这个属性依赖其他的属性，一般会使用computed，如果computed属性的属性值是函数，那么默认使用get方法，函数的返回值就是属性的属性值，在 computed中，属性有一个get方法和一个set方法，当数据发生变化时，会调用set方法。</p>
+<h2 id="Watch"><a href="#Watch" class="headerlink" title="Watch"></a>Watch</h2><p>它不支持缓存，数据变化时，它就会触发相应的操作，支持异步监听，监听的函数接收两个参数，第一个参数是最新的值，第二个是变化之前的值，当一个属性发生变化时，就需要执行相应的操作。监听数据必须是data中声明的或者父组件传递过来的props中的数据，当发生变化时，会触发其他操作，函数有两个的参数:<br>immediate:组件加载立即触发回调函数<br>deep:深度监听，发现数据内部的变化，在复杂数据类型中使用，例如数组中的对象发生变化。<br>需要注意的是，deep无法监听到数组和对象内部的变化。<br>当想要执行异步或者昂贵的操作以响应不断的变化时，就需要使用watch。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h2><p>computed 计算属性:依赖其它属性值，并且 computed 的值有缓存，只有它依赖的属性值发生改变，下一次获取 computed 的值时才会重新计computed 的值。<br>watch 侦听器:更多的是观察的作用，无缓存性，类似于某些数据的监听回调，每当监听的数据变化时都会执行回调进行后续操作。</p>
 
       </section>
 
@@ -151,8 +141,8 @@
     
     <div class="card-text">
       
-        <a href="/2021/09/15/first/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">First Blog</h2>
+        <a href="/2021/11/04/about/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">v-if和v-show的区别</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -160,6 +150,20 @@
   </article>
 </div>
           
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2021/11/04/%E5%9B%9B/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">GitHub搭建的个人博客发表文章</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
           
         </nav>
       

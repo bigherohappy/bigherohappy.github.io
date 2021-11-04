@@ -22,7 +22,7 @@
 
   
 
-  <title>Hello World | bigherohappy</title>
+  <title>v-if和v-show的区别 | bigherohappy</title>
 
   
 
@@ -93,11 +93,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">v-if和v-show的区别</h1>
           <h2 class="title-sub-wrap">
             <strong>大白</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-09-14T16:07:24.463Z" itemprop="datePublished">2021-09-15</time>
+            <time  class="article-date" datetime="2021-11-04T10:27:25.000Z" itemprop="datePublished">2021-11-04</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -126,19 +126,12 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="v-if和v-show的区别"><a href="#v-if和v-show的区别" class="headerlink" title="v-if和v-show的区别"></a>v-if和v-show的区别</h1><h2 id="手段"><a href="#手段" class="headerlink" title="手段"></a>手段</h2><p>v-if是动态的向DOM树内添加或者删除DOM元素;v-show是通过设置DOM元素的display样式属性控制显隐;</p>
+<h2 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h2><p>v-if切换有一个局部编译/卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件;v-show只是简单的基于css切换</p>
+<h2 id="编译条件"><a href="#编译条件" class="headerlink" title="编译条件"></a>编译条件</h2><p>v-if是惰性的，如里初始条件为假，则什么也不做:只有在条件笔一次变为直时才开始局部</p>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>v-show是在任何条件下，无论首次条件是否为真，都被编译，然后被缓存，而且DOM元素保留</p>
+<h2 id="性能消耗"><a href="#性能消耗" class="headerlink" title="性能消耗"></a>性能消耗</h2><p>v-if有更高的切换消耗;V-show有更高的初始渲染消耗</p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>v-if适合运营条件不大可能改变;v-show适合频繁切换</p>
 
       </section>
 
@@ -146,20 +139,20 @@
       
         <nav class="article-nav">
           
+          
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2021/09/15/first/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">First Blog</h2>
+        <a href="/2021/11/04/%E4%BA%94/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">watch与comput的区别</h2>
         </a>
       
-      <div class="card-text--row">Newer</div>
+      <div class="card-text--row">Older</div>
     </div>
   </article>
 </div>
-          
           
         </nav>
       
