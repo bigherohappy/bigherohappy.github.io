@@ -22,7 +22,7 @@
 
   
 
-  <title>Hello World | bigherohappy</title>
+  <title>vue数据绑定 | bigherohappy</title>
 
   
 
@@ -93,11 +93,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">vue数据绑定</h1>
           <h2 class="title-sub-wrap">
             <strong>大白</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-09-14T16:07:24.463Z" itemprop="datePublished">2021-09-15</time>
+            <time  class="article-date" datetime="2021-11-06T14:22:25.000Z" itemprop="datePublished">2021-11-06</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -126,19 +126,9 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="react、vue中的key有什么作用？"><a href="#react、vue中的key有什么作用？" class="headerlink" title="react、vue中的key有什么作用？"></a>react、vue中的key有什么作用？</h1><h2 id="key的内部原理"><a href="#key的内部原理" class="headerlink" title="(key的内部原理)"></a>(key的内部原理)</h2><h3 id="1-虚拟DOM中key的作用："><a href="#1-虚拟DOM中key的作用：" class="headerlink" title="1.虚拟DOM中key的作用："></a>1.虚拟DOM中key的作用：</h3><p>key是虚拟DOM对象的标识，当状态中的数据发生变化时，vue会根据【新数据】生成【新的虚拟DOM】，随后vue进行【新虚拟DOM】与【旧虚拟DOM】的差异比较，比较规则如下：</p>
+<h3 id="2-对比规则"><a href="#2-对比规则" class="headerlink" title="2.对比规则"></a>2.对比规则</h3><p>1.旧寻DOM中找到了与新虚拟DOM相同的key;<br>a.若虚拟DOM中内容没变，直接使用之前的真实DOM<br>b.若虚拟DOM中内容变了，则生成新的真实DOM，随后替换掉页面中之前的真实DOM</p>
+<p>2.旧虚拟DOM未找到与新虚拟DOM相同的key<br>创建新的真实DOM，随后渲染到页面<br><img src="https://img-blog.csdnimg.cn/7d79ecba8f3e48649ad6f932e9cf58a4.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/7d111dcb2f494ad9a3bda7e53cd4fc1d.png#pic_center" alt="在这里插入图片描述"></p>
 
       </section>
 
@@ -151,8 +141,8 @@
     
     <div class="card-text">
       
-        <a href="/2021/09/15/first/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">First Blog</h2>
+        <a href="/2021/11/07/%E4%B9%9D/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">vue的内置指令</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -160,6 +150,20 @@
   </article>
 </div>
           
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2021/11/05/%E4%B8%83/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Vue中的事件修饰符</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
           
         </nav>
       
