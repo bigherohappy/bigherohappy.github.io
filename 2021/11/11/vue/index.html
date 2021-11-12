@@ -22,7 +22,7 @@
 
   
 
-  <title>理解MVVM模型 | bigherohappy</title>
+  <title>vue笔记 | bigherohappy</title>
 
   
 
@@ -93,11 +93,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">理解MVVM模型</h1>
+          <h1 class="title-wrap">vue笔记</h1>
           <h2 class="title-sub-wrap">
             <strong>大白</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-04T13:55:09.118Z" itemprop="datePublished">2021-11-04</time>
+            <time  class="article-date" datetime="2021-11-11T13:50:04.856Z" itemprop="datePublished">2021-11-11</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -126,9 +126,21 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="MVVM模型"><a href="#MVVM模型" class="headerlink" title="MVVM模型"></a>MVVM模型</h1><h6 id="M-模型-Model-对应data的数据，代表数据模型，数据和业务逻辑都在Model层中定义"><a href="#M-模型-Model-对应data的数据，代表数据模型，数据和业务逻辑都在Model层中定义" class="headerlink" title="M:模型(Model):对应data的数据，代表数据模型，数据和业务逻辑都在Model层中定义"></a>M:模型(Model):对应data的数据，代表数据模型，数据和业务逻辑都在Model层中定义</h6><h6 id="V：视图-View-模板，负责数据的展示"><a href="#V：视图-View-模板，负责数据的展示" class="headerlink" title="V：视图(View):模板，负责数据的展示"></a>V：视图(View):模板，负责数据的展示</h6><h6 id="VM：视图模型-ViewModel-Vue实例对象，负责监听Model中数据的改变并且控制视图的更新，处理用户交互操作"><a href="#VM：视图模型-ViewModel-Vue实例对象，负责监听Model中数据的改变并且控制视图的更新，处理用户交互操作" class="headerlink" title="VM：视图模型(ViewModel):Vue实例对象，负责监听Model中数据的改变并且控制视图的更新，处理用户交互操作"></a>VM：视图模型(ViewModel):Vue实例对象，负责监听Model中数据的改变并且控制视图的更新，处理用户交互操作</h6><p><img src="https://img-blog.csdnimg.cn/6b5239e7d1954bb2b92b65ecf93426d8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>观察发现：<br>        1.data中所有的属性，最后都出现在了vm身上<br>        2.vm身上所有的属性及Vue原型上所有属性，在Vue模板中都可以直接使用</p>
-<p> Model和View并无直接关联，而是通过ViewModel来进行联系的，Model和ViewModel之间有着双向数据绑定的联系。因此当Model中的数据改变时会触发 View层的刷新，View中由于用户交互操作而改变的数据也会在Model中同步。</p>
-<p> 这种模式实现了 Model和View的数据自动同步，因此开发者只需要专注于数据的维护操作即可，而不需要自己操作DOM。</p>
+        <h1 id="vue笔记"><a href="#vue笔记" class="headerlink" title="vue笔记"></a>vue笔记</h1><p>第一步：安装(仅第一次执行)：全局安装@vue/cli</p>
+<pre><code class="bash">npm install -g @vue/cli
+</code></pre>
+<p>第二步：切换到你要创建项目的目录下，创建项目</p>
+<pre><code class="bash">vue create happy
+</code></pre>
+<p>第三步：启动项目</p>
+<pre><code class="bash">npm run serve
+</code></pre>
+<p>脚手架文件结构</p>
+<p><img src="https://img-blog.csdnimg.cn/997ee040fadf4e32a379fe952a73e0bc.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>关于不同版本的vue</p>
+<p><img src="https://img-blog.csdnimg.cn/3a02e721c9ab4cf8a651aa44ee88c3ff.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>ref属性<br><img src="https://img-blog.csdnimg.cn/d91791e2fa85435597d980ac0c145133.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>关于VueComponent<br><img src="https://img-blog.csdnimg.cn/ef6732ad15a046f0a7acf4687b207301.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>配置项props<br><img src="https://img-blog.csdnimg.cn/61256c85508840c89d6d9ead9561a294.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>scoped样式<br><img src="https://img-blog.csdnimg.cn/9166d0d81f874ae793c5a03e47593c5f.png" alt="在这里插入图片描述"><br>组件化编码流程<br><img src="https://img-blog.csdnimg.cn/d1bfb210723344978e61747cd3c06dcf.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_13,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 
       </section>
 
@@ -136,28 +148,14 @@
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2021/11/05/%E4%B8%83/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">Vue中的事件修饰符</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2021/11/04/about/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">v-if和v-show的区别</h2>
+        <a href="/2021/11/07/%E4%B9%9D/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">vue的内置指令</h2>
         </a>
       
       <div class="card-text--row">Older</div>
