@@ -22,7 +22,7 @@
 
   
 
-  <title>vue数据绑定 | bigherohappy</title>
+  <title>ES6笔记 | bigherohappy</title>
 
   
 
@@ -93,11 +93,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">vue数据绑定</h1>
+          <h1 class="title-wrap">ES6笔记</h1>
           <h2 class="title-sub-wrap">
             <strong>大白</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-04T10:27:25.000Z" itemprop="datePublished">2021-11-04</time>
+            <time  class="article-date" datetime="2021-11-29T14:50:40.620Z" itemprop="datePublished">2021-11-29</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -126,16 +126,168 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="vue数据绑定"><a href="#vue数据绑定" class="headerlink" title="vue数据绑定"></a>vue数据绑定</h1><h2 id="单向绑定（v-bind）"><a href="#单向绑定（v-bind）" class="headerlink" title="单向绑定（v-bind）"></a>单向绑定（v-bind）</h2><p>单向绑定（v-bind）：数据只能从data流向页面</p>
-<h2 id="双向绑定（v-model）"><a href="#双向绑定（v-model）" class="headerlink" title="双向绑定（v-model）"></a>双向绑定（v-model）</h2><p>双向绑定（v-model)：数据不仅能从data流向页面，还可以从页面流向data</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>1.双向绑定一般都是应用在表单元素上（如：input、select等）<br>2.v-model：value可以简写为v-model，因为v-model默认收集的就是value值</p>
-<p>下面展示一些 v-bind v-model的代码片。</p>
-<pre><code>// 单向数据绑定
-单向数据绑定：&lt;input type=&quot;text&quot; :value=&quot;a&quot;&gt;
+        <h1 id="ES6笔记"><a href="#ES6笔记" class="headerlink" title="ES6笔记"></a>ES6笔记</h1><h2 id="let-声明变量"><a href="#let-声明变量" class="headerlink" title="let 声明变量"></a>let 声明变量</h2><h6 id="1-变量不能重复声明"><a href="#1-变量不能重复声明" class="headerlink" title="1.变量不能重复声明"></a>1.变量不能重复声明</h6><p><img src="https://img-blog.csdnimg.cn/9e01b4f71a4a4db3ba35ed96cb6aa8cc.png" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/29834550fefe4aa585c1c22f17c08bb8.png" alt="在这里插入图片描述"></p>
+<h6 id="2-块儿级作用域-全局-函数，eval"><a href="#2-块儿级作用域-全局-函数，eval" class="headerlink" title="2.块儿级作用域 全局 函数，eval"></a>2.块儿级作用域 全局 函数，eval</h6><p><img src="https://img-blog.csdnimg.cn/f35b1fbdf55a410ea450b8a8656f0720.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/b5d0777a8c194321abff041998f96098.png" alt="在这里插入图片描述"></p>
+<h6 id="3-不存在变量提升"><a href="#3-不存在变量提升" class="headerlink" title="3.不存在变量提升"></a>3.不存在变量提升</h6><p><img src="https://img-blog.csdnimg.cn/14079116901041de82925315d5bea1c9.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/6b456f43f59e48c0a11d183bf1f2ede2.png" alt="在这里插入图片描述"></p>
+<h6 id="4-不影响作用域链"><a href="#4-不影响作用域链" class="headerlink" title="4.不影响作用域链"></a>4.不影响作用域链</h6><p><img src="https://img-blog.csdnimg.cn/8828d2ca36ef49358f0b8d941da56983.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_16,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/74369b60ea1b435a920e9bd53aa5833b.png" alt="在这里插入图片描述"></p>
+<h2 id="const声明常量"><a href="#const声明常量" class="headerlink" title="const声明常量"></a>const声明常量</h2><h6 id="1-一定要赋初值"><a href="#1-一定要赋初值" class="headerlink" title="1.一定要赋初值"></a>1.一定要赋初值</h6><p><img src="https://img-blog.csdnimg.cn/e2b301021fed431d9855f7bcb232e319.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/d99e3defd5114dec859b7c7a1a2318f0.png" alt="在这里插入图片描述"></p>
+<h6 id="2-一般常量使用大写（潜规则）"><a href="#2-一般常量使用大写（潜规则）" class="headerlink" title="2.一般常量使用大写（潜规则）"></a>2.一般常量使用大写（潜规则）</h6><pre><code>const A=100;
+console.log(A);
 </code></pre>
-<pre><code class="javascript">// 双向数据绑定
- 双向数据绑定：&lt;input type=&quot;text&quot; v-model:=&quot;a&quot;&gt;
+<p>​  </p>
+<h6 id="3-常量的值不能修改"><a href="#3-常量的值不能修改" class="headerlink" title="3.常量的值不能修改"></a>3.常量的值不能修改</h6><pre><code> SHCOOL=&#39;WENLI&#39;
 </code></pre>
+<h6 id="4-块儿级作用域"><a href="#4-块儿级作用域" class="headerlink" title="4.块儿级作用域"></a>4.块儿级作用域</h6><pre><code>​    &#123;
+​      const P=&#39;EW&#39;
+​    &#125;
+​    console.log(P);
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/98f7874b39e047f4b76b0184080b7aed.png" alt="在这里插入图片描述"></p>
+<h6 id="5-对于数组和对象的元素修改，不算做对常量的修改，不会报错"><a href="#5-对于数组和对象的元素修改，不算做对常量的修改，不会报错" class="headerlink" title="5.对于数组和对象的元素修改，不算做对常量的修改，不会报错"></a>5.对于数组和对象的元素修改，不算做对常量的修改，不会报错</h6><pre><code>​      const Te=[&#39;ww&#39;,&#39;QQ&#39;,&#39;WX&#39;]
+​      Te.push(&#39;ME&#39;)
+​      console.log(Te);
+</code></pre>
+<p>数组一般用const</p>
+<h4 id="ES6引入新的声明字符串的方式-‘’-“”"><a href="#ES6引入新的声明字符串的方式-‘’-“”" class="headerlink" title="ES6引入新的声明字符串的方式[``] ‘’ “”"></a>ES6引入新的声明字符串的方式[``] ‘’ “”</h4><h6 id="1-声明"><a href="#1-声明" class="headerlink" title="1.声明"></a>1.声明</h6><p> // ES6引入新的声明字符串的方式[``] ‘’ “”</p>
+<pre><code>// 1.声明
+ let str=`我是一个字符串哦`
+ console.log(str,typeof str);
+</code></pre>
+<h6 id="2-内容中可以直接出现换行符"><a href="#2-内容中可以直接出现换行符" class="headerlink" title="2.内容中可以直接出现换行符"></a>2.内容中可以直接出现换行符</h6><pre><code>  let s = `&lt;ul&gt;
+​                  &lt;li&gt;1&lt;/li&gt;
+​                  &lt;li&gt;2&lt;/li&gt;
+​             &lt;/ul&gt;`
+    console.log(s);
+</code></pre>
+<h6 id="3-变量拼接"><a href="#3-变量拼接" class="headerlink" title="// 3.变量拼接"></a>// 3.变量拼接</h6><pre><code>    let o=&#39;大白&#39;
+​    let out=`$&#123;o&#125;是我最喜欢的动漫`
+​    console.log(out);
+</code></pre>
+<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><h4 id="ES6允许使用-箭头-gt-定义函数"><a href="#ES6允许使用-箭头-gt-定义函数" class="headerlink" title="ES6允许使用[箭头] (=&gt;)定义函数"></a>ES6允许使用[箭头] (=&gt;)定义函数</h4><h6 id="1-this是静态的-this始终指向函数声明时所在作用域下的this的值"><a href="#1-this是静态的-this始终指向函数声明时所在作用域下的this的值" class="headerlink" title="1.this是静态的,this始终指向函数声明时所在作用域下的this的值"></a>1.this是静态的,this始终指向函数声明时所在作用域下的this的值</h6><pre><code>  function getName()&#123;
+​      console.log(this.name);
+​    &#125;
+​  let getName2=()=&gt;&#123;
+​      console.log(this.name);
+​    &#125;
+</code></pre>
+<h6 id="设置window-对象的name属性"><a href="#设置window-对象的name属性" class="headerlink" title="设置window 对象的name属性"></a>设置window 对象的name属性</h6><pre><code>​    window.name=&#39;大白&#39;
+​    const s=&#123;
+​      name:&#39;bighero&#39;
+​    &#125;
+</code></pre>
+<p>​  </p>
+<p>​    // 直接调用</p>
+<pre><code>getName()
+ getName2()
+</code></pre>
+<p>​    // call方法调用</p>
+<pre><code> getName.call(s)
+ getName2.call(s)
+</code></pre>
+<p>​   </p>
+<h4 id="2-不能作为构造函数实列化对象"><a href="#2-不能作为构造函数实列化对象" class="headerlink" title="2.不能作为构造函数实列化对象"></a>2.不能作为构造函数实列化对象</h4><pre><code> let Person=(name,age)=&gt;&#123;
+ this.name=name;
+ this.age=age
+&#125;
+let me=new Person(&#39;big&#39;,30)
+ console.log(me);
+</code></pre>
+<h4 id="3-不能使用arguments变量"><a href="#3-不能使用arguments变量" class="headerlink" title="3.不能使用arguments变量"></a>3.不能使用arguments变量</h4><pre><code>​      let fn=()=&gt;&#123;
+​        console.log(arguments);
+​      &#125;
+​      fn(1,2,3)
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/15fb830e7ac946aab2efa60a26c9001f.png" alt="在这里插入图片描述"></p>
+<h4 id="4-箭头函数的简写"><a href="#4-箭头函数的简写" class="headerlink" title="4.箭头函数的简写"></a>4.箭头函数的简写</h4><p>​      <strong>ａ．省略小括号，当形参有且只有一个的时候</strong></p>
+<pre><code>​      let add=n=&gt;&#123;
+
+​        return n+n;
+
+​      &#125;
+
+​      console.log(add(9));
+</code></pre>
+<p>​      <strong>b.省略花括号，当代码体只有一条语句的时候，此时return必须省略</strong></p>
+<p>​      <strong>而且语句的执行结果就是函数的返回值</strong></p>
+<pre><code>​      let pow=(n)=&gt;n*n;
+
+​      console.log(pow(3));
+</code></pre>
+<p> <strong>箭头函数适合与this无关的回调，定时器，数组的方法回调</strong></p>
+<p>​  <strong>箭头函数不适合与this有关的回调，事件回调，对象的方法</strong></p>
+<h4 id="ES6允许给函数赋值初始值"><a href="#ES6允许给函数赋值初始值" class="headerlink" title="ES6允许给函数赋值初始值"></a>ES6允许给函数赋值初始值</h4><h5 id="1-形参初始值-具有默认值的参数，一般位置要靠后（潜规则）"><a href="#1-形参初始值-具有默认值的参数，一般位置要靠后（潜规则）" class="headerlink" title="1.形参初始值 具有默认值的参数，一般位置要靠后（潜规则）"></a>1.形参初始值 具有默认值的参数，一般位置要靠后（潜规则）</h5><pre><code>​    function add(a,b,c=10)&#123;
+
+​      return a+b+c;
+
+​    &#125;
+
+​    let re=add(1,2)
+
+​    console.log(re);
+</code></pre>
+<h5 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h5><p>[…] 扩展运算符能将【数组】转换为逗号分隔的【参数序列】 –&gt;</p>
+<pre><code>​    // 1.数组的合并 
+
+​    const kk=[&#39;happy&#39;,&#39;big&#39;]
+
+​    const ww=[&#39;大笔&#39;,&#39;开心&#39;]
+
+​    const aa=kk.concat(ww)
+
+​    console.log(aa);
+
+​    const ss=[...kk,...ww]
+
+​    console.log(ss);
+</code></pre>
+<pre><code>​    // 2.数组的克隆
+
+​    const s=[&#39;w&#39;,&#39;S&#39;,&#39;H&#39;];
+
+​    const sancopy=[...s];
+
+​    console.log(sancopy);
+</code></pre>
+<pre><code>​    // 3.将伪数组转为真正的数组
+
+​    const divs=document.querySelectorAll(&#39;div&#39;);
+
+​    const divArr=[...divs];
+
+​    console.log(divArr);
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/43325e875eb84fdcb633fe001b51e4ed.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>Symbol </p>
+<h5 id="创建Symbol"><a href="#创建Symbol" class="headerlink" title="创建Symbol"></a>创建Symbol</h5><pre><code>​    let s=Symbol();
+
+​    console.log(s,typeof s);
+
+​    let s2=Symbol(&#39;大白&#39;)
+
+​    let s3=Symbol(&#39;大白&#39;)
+</code></pre>
+<h5 id="Symbol-for-创建"><a href="#Symbol-for-创建" class="headerlink" title="Symbol.for 创建"></a>Symbol.for 创建</h5><pre><code>​    let s4=Symbol.for(&#39;da&#39;)
+
+​    let s5=Symbol.for(&#39;da&#39;)
+</code></pre>
+<h5 id="不能与其他数组进行运算"><a href="#不能与其他数组进行运算" class="headerlink" title="不能与其他数组进行运算"></a>不能与其他数组进行运算</h5><pre><code>​    // let re=s+100
+
+​    // let re=s&gt;100
+
+​    // let re=s+s
+</code></pre>
+<h5 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h5><pre><code>   // USONB you are so niubility
+
+​    // u undefined
+
+​    // s string symbol
+
+​    // o object
+
+​    // n null number
+
+​    // b boolean
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/cb1d601bd629492dba298c44c60464f5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>symbol属性</p>
 
       </section>
 
@@ -148,8 +300,8 @@
     
     <div class="card-text">
       
-        <a href="/2021/11/04/%E4%BA%94/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">watch与comput的区别</h2>
+        <a href="/2021/11/29/%E5%AE%89%E8%A3%85%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">安装淘宝镜像</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -163,8 +315,8 @@
     
     <div class="card-text">
       
-        <a href="/2021/11/04/%E5%9B%9B/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">GitHub搭建的个人博客发表文章</h2>
+        <a href="/2021/11/11/vue/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">vue笔记</h2>
         </a>
       
       <div class="card-text--row">Older</div>
