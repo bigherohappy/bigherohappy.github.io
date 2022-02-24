@@ -22,7 +22,7 @@
 
   
 
-  <title>git hexo github修改主题 | bigherohappy</title>
+  <title>有哪些常见的服务端推送的通信解决方案？它们的优劣分别是什么？ | bigherohappy</title>
 
   
 
@@ -93,11 +93,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">git hexo github修改主题</h1>
+          <h1 class="title-wrap">有哪些常见的服务端推送的通信解决方案？它们的优劣分别是什么？</h1>
           <h2 class="title-sub-wrap">
             <strong>大白</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-03T13:07:15.202Z" itemprop="datePublished">2021-11-03</time>
+            <time  class="article-date" datetime="2022-02-24T10:27:25.000Z" itemprop="datePublished">2022-02-24</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -126,13 +126,9 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="使用git-和github、hexo搭建博客"><a href="#使用git-和github、hexo搭建博客" class="headerlink" title="使用git 和github、hexo搭建博客"></a>使用git 和github、hexo搭建博客</h1><h2 id="hexo主题修改"><a href="#hexo主题修改" class="headerlink" title="hexo主题修改"></a>hexo主题修改</h2><p>hexo themes<br>官网<img src="https://img-blog.csdnimg.cn/61882e63bdb44fbb92ce3d1b420521d9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>主题: <a target="_blank" rel="noopener" href="https://hexo.io/themes/">选择自己喜欢的风格</a></p>
-<p>点击下载: <img src="https://img-blog.csdnimg.cn/d58013748ec741b1be85c4a86f1e0953.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<p>将下载的主题解压后放在themes文件中<img src="https://img-blog.csdnimg.cn/560620063c1246c09321799dd5c5f1bc.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="命令下载"><a href="#命令下载" class="headerlink" title="命令下载:"></a>命令下载:</h2><pre><code class="javascript">// 下载主题
- git clone https://github.com/miiiku/hexo-theme-flexblock.git ./themes/flex-block
-</code></pre>
-<p>修改config.yml中的主题名<br>theme:你下载的主题名<br><img src="https://img-blog.csdnimg.cn/b47d57a2102441d3b1191ff1a8eefe76.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>最后部署到GitHub上就可以了<br>git s<br>git g<br>git d <img src="https://img-blog.csdnimg.cn/d919fe01a0834efc82034b1d8e81f47b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+        <h1 id="有哪些常见的服务端推送的通信解决方案？它们的优劣分别是什么？"><a href="#有哪些常见的服务端推送的通信解决方案？它们的优劣分别是什么？" class="headerlink" title="有哪些常见的服务端推送的通信解决方案？它们的优劣分别是什么？"></a>有哪些常见的服务端推送的通信解决方案？它们的优劣分别是什么？</h1><h3 id="Ajax轮询，利用XHR，通过setInterval定时向后端发送请求"><a href="#Ajax轮询，利用XHR，通过setInterval定时向后端发送请求" class="headerlink" title="Ajax轮询，利用XHR，通过setInterval定时向后端发送请求"></a>Ajax轮询，利用XHR，通过setInterval定时向后端发送请求</h3><p>优点：实现简单<br>缺点：数据同步不及时，增加后端处理压力</p>
+<h3 id="Ajax长轮询，在Ajax轮询的基础上做的改进，在后端数据没有更新时不再返回空响应，而且后端一直保持连接，直到后端有数据变化，则响应请求并且关闭连接，前端收到数据后，再次向后端发起请求，并处理刚刚收到的数据"><a href="#Ajax长轮询，在Ajax轮询的基础上做的改进，在后端数据没有更新时不再返回空响应，而且后端一直保持连接，直到后端有数据变化，则响应请求并且关闭连接，前端收到数据后，再次向后端发起请求，并处理刚刚收到的数据" class="headerlink" title="Ajax长轮询，在Ajax轮询的基础上做的改进，在后端数据没有更新时不再返回空响应，而且后端一直保持连接，直到后端有数据变化，则响应请求并且关闭连接，前端收到数据后，再次向后端发起请求，并处理刚刚收到的数据"></a>Ajax长轮询，在Ajax轮询的基础上做的改进，在后端数据没有更新时不再返回空响应，而且后端一直保持连接，直到后端有数据变化，则响应请求并且关闭连接，前端收到数据后，再次向后端发起请求，并处理刚刚收到的数据</h3><p>优点：通信及时，服务端资源消耗低<br>缺点：请求交替时消息会延迟</p>
+<h3 id="websocket，允许服务端主动向客户端发送数据，浏览器和服务器只需要完成一次握手就可以创建持久性的连接，并进行双向数据传输"><a href="#websocket，允许服务端主动向客户端发送数据，浏览器和服务器只需要完成一次握手就可以创建持久性的连接，并进行双向数据传输" class="headerlink" title="websocket，允许服务端主动向客户端发送数据，浏览器和服务器只需要完成一次握手就可以创建持久性的连接，并进行双向数据传输"></a>websocket，允许服务端主动向客户端发送数据，浏览器和服务器只需要完成一次握手就可以创建持久性的连接，并进行双向数据传输</h3><p>优点：通信及时，采用双工的通信模式<br>缺点：服务端资源消耗高</p>
 
       </section>
 
@@ -145,8 +141,8 @@
     
     <div class="card-text">
       
-        <a href="/2021/11/04/%E5%9B%9B/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">GitHub搭建的个人博客发表文章</h2>
+        <a href="/2022/02/24/%E4%BB%8A%E6%97%A5%E4%BB%BD/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">今日份</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -160,8 +156,8 @@
     
     <div class="card-text">
       
-        <a href="/2021/11/03/%E4%B8%89/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">hexo博客修改主题</h2>
+        <a href="/2022/02/23/%E4%BB%8E%E8%BE%93%E5%85%A5url%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%8E%B0%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F%20/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">从输入url到页面展现发生了什么？</h2>
         </a>
       
       <div class="card-text--row">Older</div>
