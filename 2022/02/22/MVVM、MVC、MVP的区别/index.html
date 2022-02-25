@@ -22,7 +22,7 @@
 
   
 
-  <title>watch与comput的区别 | bigherohappy</title>
+  <title>MVVM、MVC、MVP的区别 | bigherohappy</title>
 
   
 
@@ -93,11 +93,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">watch与comput的区别</h1>
+          <h1 class="title-wrap">MVVM、MVC、MVP的区别</h1>
           <h2 class="title-sub-wrap">
             <strong>大白</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-04T10:27:25.000Z" itemprop="datePublished">2021-11-04</time>
+            <time  class="article-date" datetime="2022-02-22T10:27:25.000Z" itemprop="datePublished">2022-02-22</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -126,10 +126,13 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="Computed-和-Watch-的区别"><a href="#Computed-和-Watch-的区别" class="headerlink" title="Computed 和 Watch 的区别"></a>Computed 和 Watch 的区别</h1><h2 id="Computed"><a href="#Computed" class="headerlink" title="Computed"></a>Computed</h2><p> 它支持缓存，只有依赖的数据发生了变化，才会重新计算，不支持异步，当Computed中有异步操作时，无法监听数据的变化.computed的值会默认走缓存，计算属性是基于它们的响应式依赖进行缓存的，也就是基于data声明过，或者父组件传递过来的props中的数据进行计算的。如果一个属性是由其他属性计算而来的，这个属性依赖其他的属性，一般会使用computed，如果computed属性的属性值是函数，那么默认使用get方法，函数的返回值就是属性的属性值，在 computed中，属性有一个get方法和一个set方法，当数据发生变化时，会调用set方法。</p>
-<h2 id="Watch"><a href="#Watch" class="headerlink" title="Watch"></a>Watch</h2><p>它不支持缓存，数据变化时，它就会触发相应的操作，支持异步监听，监听的函数接收两个参数，第一个参数是最新的值，第二个是变化之前的值，当一个属性发生变化时，就需要执行相应的操作。监听数据必须是data中声明的或者父组件传递过来的props中的数据，当发生变化时，会触发其他操作，函数有两个的参数:<br>immediate:组件加载立即触发回调函数<br>deep:深度监听，发现数据内部的变化，在复杂数据类型中使用，例如数组中的对象发生变化。<br>需要注意的是，deep无法监听到数组和对象内部的变化。<br>当想要执行异步或者昂贵的操作以响应不断的变化时，就需要使用watch。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h2><p>computed 计算属性:依赖其它属性值，并且 computed 的值有缓存，只有它依赖的属性值发生改变，下一次获取 computed 的值时才会重新计computed 的值。<br>watch 侦听器:更多的是观察的作用，无缓存性，类似于某些数据的监听回调，每当监听的数据变化时都会执行回调进行后续操作。</p>
-<p><img src="https://img-blog.csdnimg.cn/dfbc55a2f88e46e89288667258abb4ac.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+        <h2 id="MVVM、MVC、MVP的区别"><a href="#MVVM、MVC、MVP的区别" class="headerlink" title="MVVM、MVC、MVP的区别"></a>MVVM、MVC、MVP的区别</h2><p>MVC、MVP 和 MVVM 是三种常见的软件架构设计模式，主要通过分离关注点的方式来组织代码结构，优化开发效率。</p>
+<p>在开发单页面应用时，往往一个路由页面对应了一个脚本文件，所有的页面逻辑都在一个脚本文件里。页面的渲染、数据的获取，对用户事件的响应所有的应用逻辑都混合在一起，这样在开发简单项目时，可能看不出什么问题，如果项目变得复杂，那么整个文件就会变得冗长、混乱，这样对项目开发和后期的项目维护是非常不利的。</p>
+<h4 id="1-MVC"><a href="#1-MVC" class="headerlink" title="(1) MVC"></a>(1) MVC</h4><p>MVC 通过分离 Model、View 和 Controller 的方式来组织代码结构。其中 View 负责页面的显示逻辑，Model 负责存储页面的业务数据，以及对相应数据的操作。并且 View 和 Model 应用了观察者模式，当 Model 层发生改变的时候它会通知有关 View 层更新页面。Controller 层是 View 层和 Model 层的纽带，它主要负责用户与应用的响应操作，当用户与页面产生交互的时候，Controller 中的事件触发器就开始工作了，通过调用 Model 层，来完成对 Model 的修改，然后 Model 层再去通知 View 层更新。<br><img src="https://img-blog.csdnimg.cn/0fb960b4a55d4ec1b56d195415ba970a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_12,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h4 id="（2）MVVM"><a href="#（2）MVVM" class="headerlink" title="（2）MVVM"></a>（2）MVVM</h4><p>MVVM 分为 Model、View、ViewModel：<br>● Model代表数据模型，数据和业务逻辑都在Model层中定义；<br>● View代表UI视图，负责数据的展示；<br>● ViewModel负责监听Model中数据的改变并且控制视图的更新，处理用户交互操作；</p>
+<p>Model和View并无直接关联，而是通过ViewModel来进行联系的，Model和ViewModel之间有着双向数据绑定的联系。因此当Model中的数据改变时会触发View层的刷新，View中由于用户交互操作而改变的数据也会在Model中同步。</p>
+<p>这种模式实现了 Model和View的数据自动同步，因此开发者只需要专注于数据的维护操作即可，而不需要自己操作DOM。<br><img src="https://img-blog.csdnimg.cn/1654994cffce42e9b2f0baac371bedae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5aSn55m96KaB5byA5b-D5ZGA,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h4 id="（3）MVP"><a href="#（3）MVP" class="headerlink" title="（3）MVP"></a>（3）MVP</h4><p>MVP 模式与 MVC 唯一不同的在于 Presenter 和 Controller。在 MVC 模式中使用观察者模式，来实现当 Model 层数据发生变化的时候，通知 View 层的更新。这样 View 层和 Model 层耦合在一起，当项目逻辑变得复杂的时候，可能会造成代码的混乱，并且可能会对代码的复用性造成一些问题。MVP 的模式通过使用 Presenter 来实现对 View 层和 Model 层的解耦。MVC 中的Controller 只知道 Model 的接口，因此它没有办法控制 View 层的更新，MVP 模式中，View 层的接口暴露给了 Presenter 因此可以在 Presenter 中将 Model 的变化和 View 的变化绑定在一起，以此来实现 View 和 Model 的同步更新。这样就实现了对 View 和 Model 的解耦，Presenter 还包含了其他的响应逻辑。</p>
 
       </section>
 
@@ -142,8 +145,8 @@
     
     <div class="card-text">
       
-        <a href="/2021/11/04/about/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">v-if和v-show的区别</h2>
+        <a href="/2022/02/23/toraw/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">toRaw</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -157,8 +160,8 @@
     
     <div class="card-text">
       
-        <a href="/2021/11/04/%E5%85%AD/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">vue数据绑定</h2>
+        <a href="/2022/01/05/includes%E5%92%8CindexOf%E7%9A%84%E5%8C%BA%E5%88%AB/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">includes和indexOf的区别</h2>
         </a>
       
       <div class="card-text--row">Older</div>
